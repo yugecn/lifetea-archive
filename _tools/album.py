@@ -25,6 +25,23 @@ for fn in [RAW+'/cdx_domain.txt',RAW+'/album/cdx_photo_non200.txt']:
             k=p.lower()
             if k not in items or f[0]<items[k][1]: items[k]=(p,f[0],f[1])
         elif p.endswith('/'): albums.add(p.rstrip('/'))
+# 1b. Album items seen only in Common Crawl 2008-2010 captures (_raw/album/cc/cc_items.json, built from CC WARC records)
+import json
+ccitems={}
+ccf=RAW+'/album/cc/cc_items.json'
+if os.path.exists(ccf):
+    ccitems=json.load(open(ccf))
+    for p,d in ccitems.items():
+        k=p.lower()
+        if k not in items: items[k]=(p,d['ts'],'CC:'+d['page'])
+ccdims={p.lower():(d.get('resized') or d.get('thumb')) for p,d in ccitems.items()}
+def aspect_ok(k,f):
+    d=ccdims.get(k)
+    if not d: return None
+    try: w,h=Image.open(f).size
+    except Exception: return False
+    a=d[1]/d[2]; b=w/h
+    return abs(a-b)/a<0.08
 # file sources
 def scan(d):
     r={}
@@ -63,6 +80,7 @@ for f in sorted(glob.glob(RAW+'/album/wb_d/*')):
 for k,(p,ts,page) in sorted(items.items()):
     fn=os.path.basename(p).lower()
     cands=[(os.path.getsize(f),f,'lifetea.org blog copy (Wayback)') for f in blog.get(fn,[])]+[(os.path.getsize(f),f,'tecinese.com copy (Wayback)') for f in tec.get(fn,[])]
+    cands=[c for c in cands if aspect_ok(k,c[1]) is not False]
     best=None
     if k in direct: best=(os.path.getsize(direct[k][0]),direct[k][0],'Wayback /d/')
     for c in cands:
@@ -73,11 +91,20 @@ for k,(p,ts,page) in sorted(items.items()):
         if best[1] not in [d[0] for d in direct.values()]:
             os.makedirs(os.path.dirname(OUT+'/'+p),exist_ok=True); shutil.copy2(best[1],OUT+'/'+p)
             rows=[r for r in rows if r[0]!=p]
-            rows.append([p,p,'blog-size copy (matched by filename)',best[2],src_of(best[1]),best[0],dims(best[1]),'filename match'])
-    inv.append([p,'https://web.archive.org/web/%s/%s'%(ts,page),status])
+            ak=aspect_ok(k,best[1])
+            rows.append([p,p,'blog-size copy (matched by filename)',best[2],src_of(best[1]),best[0],dims(best[1]),'filename match'+(' + aspect ratio matches album thumbnail' if ak else ' (no album thumbnail to cross-check)')])
+    inv.append([p,('Common Crawl %s %s'%(ts,page[3:])) if page.startswith('CC:') else 'https://web.archive.org/web/%s/%s'%(ts,page),status])
+def version(r):
+    px=r[6]
+    try: m=max(int(x) for x in px.split('x'))
+    except Exception: m=0
+    if 'thumbnail' in r[2] or (m and m<=200): return 'thumb'
+    return 'resized'   # no originals survive; display/blog copies are all downsized
+for r in rows: r.append(version(r))
 with open(OUT+'/manifest.csv','w',newline='') as fh:
-    w=csv.writer(fh); w.writerow(['file','album/title','kind','archive','source_url','bytes','pixels','match']); w.writerows(sorted(rows))
+    w=csv.writer(fh); w.writerow(['file','album/title','kind','archive','source_url','bytes','pixels','match','version']); w.writerows(sorted(rows))
 with open(OUT+'/inventory.csv','w',newline='') as fh:
     w=csv.writer(fh); w.writerow(['album_photo','archived_item_page','status']); w.writerows(inv)
 rec=sum(1 for r in inv if r[2]!='missing')
+print('versions',{v:sum(1 for r in rows if r[-1]==v) for v in ('thumb','resized','original')})
 print('album items known',len(inv),'albums',len(albums),'recovered',rec,'files in manifest',len(rows))
