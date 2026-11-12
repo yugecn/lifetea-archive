@@ -14,6 +14,7 @@ for f in files:
         if p['id'] in posts and not isind: continue
         p['_ind']=isind
         if not isind: p['comments']=None
+        p.setdefault('comments',None)
         posts[p['id']]=p
 img_have=set()
 for f in glob.glob(RAW+'/img/**/*',recursive=True):
@@ -43,7 +44,7 @@ for pid,p in sorted(posts.items()):
     y=p['date'][:4] if p['date'] else 'undated'
     fn='%s-a%d.md'%(p['date'] or 'undated',pid)
     wb='https://web.archive.org/web/%s/%s'%(p['ts'],p['src'])
-    fm='---\ntitle: "%s"\ndate: %s\ncategory: "%s"\npost_id: %d\noriginal_url: "%s"\nwayback_url: "%s"\ncomments: %s\n---\n\n'%(esc(p['title']),p['date'] or '""',esc(p['category']),pid,esc(p['href']),wb,len(p['comments'] or []) if p['comments'] is not None else '"not captured"')
+    fm='---\ntitle: "%s"\ndate: %s\ncategory: "%s"\npost_id: %d\noriginal_url: "%s"\nwayback_url: "%s"\ncomments: %s\n---\n\n'%(esc(p['title']),p['date'] or '""',esc(p['category']),pid,esc(p['href']),wb,len(p.get('comments') or []) if p.get('comments') is not None else '"not captured"')
     txt=fm+'# '+p['title']+'\n\n'+mdb+'\n'
     if p['comments']:
         txt+='\n---\n\n## 评论（%d）\n\n'%len(p['comments'])
