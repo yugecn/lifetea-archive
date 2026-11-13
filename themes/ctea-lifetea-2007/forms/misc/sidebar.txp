@@ -1,0 +1,36 @@
+<div id="sidebar-1">
+<ul id="menu">
+	<li>Home
+		<ol><a href="<txp:site_url />">Home</a></ol></li>
+	<li>About
+		<ol>christina@Nanjing,China <br /> hqoo@hotmail.com</ol>
+	</li>
+	<li>My Album
+		<ol><a href="http://photo.lifetea.org/">My Album</a></ol></li>
+	<li>Archives
+		<ol><a href="<txp:site_url />archive/">Archives</a></ol></li>
+	<li>Recent Entries
+	近期文章<br /><txp:recent_articles section="article" limit="15" wraptag="ol" break="li" class="recent_articles" />
+	</li>
+	<li>Recent Comments
+	<txp:recent_comments limit="15" wraptag="ol" break="li" class="recent_comments" />
+	</li>
+	<li>Categories
+	<txp:category_list wraptag="ol" break="li" class="category_list" />
+	</li>
+	<li>Favorite Sites
+	<txp:linklist category="favorite" form="plainlinks" wraptag="ol" break="li" class="linklist" />
+	</li>
+	<li>Blog Life
+	<txp:linklist category="bloglife" form="plainlinks" wraptag="ol" break="li" class="linklist" />
+	</li>
+	<li>Photo Life
+	<txp:linklist category="photolife" form="plainlinks" wraptag="ol" break="li" class="linklist" />
+	</li>
+	<li>Feeds
+	<ol>
+	<li><txp:feed_link flavor="rss" label="RSS" title="RSS Feed" /></li>
+	<li><txp:feed_link flavor="atom" label="Atom" title="Atom Feed" /></li>
+	</ol></li>
+</ul>
+</div>

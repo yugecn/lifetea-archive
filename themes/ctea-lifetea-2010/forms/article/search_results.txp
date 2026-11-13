@@ -1,0 +1,4 @@
+<div class="entry">
+<div class="entrytitle"><txp:permlink><txp:title /></txp:permlink> <span class="entrytime"> @ <txp:posted format="%b %d, %Y" /></span></div>
+<div class="entrybody"><txp:search_result_excerpt /></div>
+</div>

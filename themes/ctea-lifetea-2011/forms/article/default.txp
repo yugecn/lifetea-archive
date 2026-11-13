@@ -1,0 +1,22 @@
+<div class="entry">
+<div class="entrytitle">
+<txp:permlink><txp:title /></txp:permlink> <span class="entrytime"> @ <txp:posted format="%b %d, %Y" /></span>
+</div>
+<div class="entrybody">
+<txp:body />
+</div>
+<div class="entrymeta">
+Posted in <txp:category1 link="1" title="1" /><txp:if_individual_article><txp:else /> | <txp:comments_invite wraptag="" /></txp:if_individual_article>
+</div>
+</div>
+<txp:if_individual_article>
+<div class="commentsblock">
+<txp:if_comments>
+<h3 id="comment"><txp:comments_count /> Responses to "<txp:title />"</h3>
+<txp:comments break="li" wraptag="ol" class="comments" />
+</txp:if_comments>
+<txp:if_comments_allowed>
+<txp:comments_form />
+</txp:if_comments_allowed>
+</div>
+</txp:if_individual_article>

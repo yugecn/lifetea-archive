@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title><txp:page_title /></title>
+<txp:css format="link" />
+<script type="text/javascript" src="<txp:site_url />js/modernizr.js"></script>
+<script type="text/javascript" src="<txp:site_url />js/jquery.js"></script>
+<script type="text/javascript" src="<txp:site_url />js/jquery-ui.js"></script>
+<script type="text/javascript" src="<txp:site_url />js/ddaccordion.js"></script>
+<script type="text/javascript">
+ddaccordion.init({
+    headerclass: "expandable", contentclass: "categoryitems", revealtype: "click",
+    mouseoverdelay: 200, collapseprev: true, defaultexpanded: [0], onemustopen: false,
+    animatedefault: false, persiststate: true, toggleclass: ["", "openheader"],
+    togglehtml: ["prefix", "", ""], animatespeed: "fast",
+    oninit: function(headers, expandedindices){ },
+    onopenclose: function(header, index, state, isuseractivated){ }
+})
+</script>
+</head>
+<body>
+<div id="container">
+<div id="header">&nbsp;</div>
+<div id="wrapper">
+<txp:output_form form="sidebar" />
+<div id="content">
+<div class="entry">
+<div class="entrytitle">Archives</div>
+<div class="entrybody">
+<txp:article_custom section="article" limit="9999" form="article_listing" wraptag="ol" class="archive_list" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>Best not view with IE 9-. Apple Safari, Google Chrome &amp; Mozilla Firefox recommended.</footer>
+</body>
+</html>

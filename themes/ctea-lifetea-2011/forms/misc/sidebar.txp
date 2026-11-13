@@ -1,0 +1,24 @@
+<div id="menu">
+<a href="<txp:site_url />"><h3 class="menuheader">Homepage</h3></a>
+<h3 class="menuheader expandable">About</h3>
+<div class="categoryitems">christina@Nanjing,China <br />tecinese@gmail.com</div>
+<a href="http://photo.lifetea.org/"><h3 class="menuheader">Album</h3></a>
+<a href="<txp:site_url />archive/"><h3 class="menuheader">Archives</h3></a>
+<h3 class="menuheader expandable">Article</h3>
+<div class="categoryitems"><txp:recent_articles section="article" limit="15" wraptag="ol" break="li" class="recent_articles" /></div>
+<h3 class="menuheader expandable">Comments</h3>
+<div class="categoryitems"><txp:recent_comments limit="15" wraptag="ol" break="li" class="recent_comments" /></div>
+<h3 class="menuheader expandable">Category</h3>
+<div class="categoryitems"><txp:category_list wraptag="ol" break="li" class="category_list" /></div>
+<h3 class="menuheader expandable">Collection</h3>
+<div class="categoryitems"><txp:linklist category="collection" form="plainlinks" wraptag="ol" break="li" class="linklist" /></div>
+<h3 class="menuheader expandable">Blogger</h3>
+<div class="categoryitems"><txp:linklist category="blogger" form="plainlinks" wraptag="ol" break="li" class="linklist" /></div>
+<h3 class="menuheader expandable">Photograph</h3>
+<div class="categoryitems"><txp:linklist category="photograph" form="plainlinks" wraptag="ol" break="li" class="linklist" /></div>
+<h3 class="menuheader expandable">Aggregation</h3>
+<ol class="categoryitems">
+<li><txp:feed_link flavor="rss" label="RSS" title="RSS Feed" /></li>
+<li><txp:feed_link flavor="atom" label="Atom" title="Atom Feed" /></li>
+</ol>
+</div>

@@ -1,0 +1,5 @@
+<div class="<txp:if_author>authorcomment</txp:if_author>">
+<cite><txp:comment_name /></cite> Says:<br />
+<small class="commentmetadata"><txp:comment_permlink> <txp:comment_time format="%Y-%m-%d" /></txp:comment_permlink></small>
+<txp:comment_message />
+</div>
