@@ -269,4 +269,6 @@ ddaccordion.init({{
         if os.path.exists(f'{RAW}/{j}'): shutil.copy(f'{RAW}/{j}',f'{base}/js/{j}')
     put_imgs(base,['5115.jpg','1907.jpg','5380.jpg','5515.jpg','titlebar.png','titlebar-active.png'])
 acc('ctea-lifetea-2011')
+os.makedirs(f'{OUT}/ctea-lifetea-2011/font',exist_ok=True)
+for f in glob.glob('/workspace/work/lifetea/_raw/img/font/*'): shutil.copy(f,f'{OUT}/ctea-lifetea-2011/font/')
 print('ok')

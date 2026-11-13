@@ -9,6 +9,7 @@ def fix(html,theme):
         n=m.group(1); p=f'{d}/images/{n}'
         return f"url('file://{p}')" if os.path.exists(p) else "url('')"
     css=re.sub(r"url\('?/images/([^')]+)'?\)",cssimg,css)
+    css=re.sub(r"url\('/font/([^')?#]+)[^')]*'\)",lambda m:f"url('file://{d}/font/{m.group(1)}')",css)
     css=re.sub(r"url\((titlebar[^)]*)\)",lambda m:f"url('file://{d}/images/{m.group(1)}')",css)
     if theme.endswith('2007'):
         html=html.replace('<div id="head">\n&nbsp;','<div id="head" style="display:flex;align-items:center;justify-content:center;background:#e9e2e7;color:#9c5e8b;font:16px sans-serif">2007 版原头图（images/905.jpg）未被 Wayback 存档',1)
