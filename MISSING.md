@@ -6,57 +6,13 @@
 
 ## 尚未抓取的文章 ID（抓取仍在进行）
 
-548, 573, 2927, 2928, 2929, 2930, 2931, 2932, 2936
+548, 573, 2927
 
 ## 文章中引用但未能取得的图片
 
 - `/images/.jpg` — 文章 a364
-- `/images/0000000.jpg` — 文章 a770
-- `/images/002.jpg` — 文章 a1119
-- `/images/006.jpg` — 文章 a1197
-- `/images/007.jpg` — 文章 a1197
-- `/images/009.jpg` — 文章 a1126
 - `/images/010912_3.jpg` — 文章 a874
-- `/images/014.jpg` — 文章 a1197
-- `/images/014sss.jpg` — 文章 a915
-- `/images/02-1ss_01.jpg` — 文章 a1180
-- `/images/026.jpg` — 文章 a1119
-- `/images/027.jpg` — 文章 a1119
-- `/images/028.jpg` — 文章 a1119
-- `/images/03021812.jpg` — 文章 a977
-- `/images/032.jpg` — 文章 a1119
-- `/images/034.jpg` — 文章 a1125
-- `/images/058.jpg` — 文章 a1119
-- `/images/060318- 013.jpg` — 文章 a601
-- `/images/060318- 016.jpg` — 文章 a601
-- `/images/060318- 018.jpg` — 文章 a601
-- `/images/060318- 020.jpg` — 文章 a601
-- `/images/060318- 027.jpg` — 文章 a601
-- `/images/060318- 034.jpg` — 文章 a601
-- `/images/060318- 0371.jpg` — 文章 a601
-- `/images/060318- 041.jpg` — 文章 a601
-- `/images/062.jpg` — 文章 a1124
-- `/images/071_01.jpg` — 文章 a1124
-- `/images/072_01.jpg` — 文章 a1124
-- `/images/077.jpg` — 文章 a1118
-- `/images/081.jpg` — 文章 a1118
-- `/images/085.jpg` — 文章 a1123
-- `/images/088_02.jpg` — 文章 a1123
-- `/images/089_02.jpg` — 文章 a1123
-- `/images/0940-1.jpg` — 文章 a969
 - `/images/094_01.jpg` — 文章 a1117
-- `/images/100_3328ccccc.jpg` — 文章 a377
-- `/images/100_3329_aaaa.jpg` — 文章 a377
-- `/images/100_3330bbbb.jpg` — 文章 a377
-- `/images/1057472080__01.jpg` — 文章 a967
-- `/images/1058550908_9Baqnr.jpg` — 文章 a801
-- `/images/10placesofmycity-1-2.gif` — 文章 a251
-- `/images/1103115451.jpg` — 文章 a86
-- `/images/111933560_e57ad6d9a4.jpg` — 文章 a587
-- `/images/1125965-.jpg` — 文章 a967
-- `/images/1125965-CO1vO4QgSd_01.jpg` — 文章 a967
-- `/images/1130820488blog.jpg` — 文章 a408
-- `/images/1130820505blog.jpg` — 文章 a408
 - `/images/1261320.jpg` — 文章 a47
 - `/images/126_2656aaaa.jpg` — 文章 a727
 - `/images/1280x1024_01.jpg` — 文章 a452
@@ -1179,118 +1135,11 @@
 - `/images/午间休息的职员.jpg` — 文章 a11
 - `/images/张贴海报的柱子.jpg` — 文章 a11
 - `/images/朴泰仁a.jpg` — 文章 a664
-- `/images/箭头_1.jpg` — 文章 a365
 - `http://christina.tecinese.com/images/- 075_01.jpg` — 文章 a1124
-- `http://lifetea.org/images/100.jpg` — 文章 a1463
-- `http://lifetea.org/images/1000.jpg` — 文章 a1804
-- `http://lifetea.org/images/1001.jpg` — 文章 a1804
-- `http://lifetea.org/images/1002.jpg` — 文章 a1804
-- `http://lifetea.org/images/1003.jpg` — 文章 a1804
-- `http://lifetea.org/images/1004.jpg` — 文章 a1804
-- `http://lifetea.org/images/1005.jpg` — 文章 a1804
-- `http://lifetea.org/images/1006.jpg` — 文章 a1804
-- `http://lifetea.org/images/1008.jpg` — 文章 a1804
-- `http://lifetea.org/images/1009.jpg` — 文章 a1804
-- `http://lifetea.org/images/101.jpg` — 文章 a1463
-- `http://lifetea.org/images/1010.jpg` — 文章 a1804
-- `http://lifetea.org/images/1011.jpg` — 文章 a1804
-- `http://lifetea.org/images/1012.jpg` — 文章 a1804
-- `http://lifetea.org/images/1013.jpg` — 文章 a1804
-- `http://lifetea.org/images/1019.jpg` — 文章 a1812
-- `http://lifetea.org/images/102.jpg` — 文章 a1463
-- `http://lifetea.org/images/1020.jpg` — 文章 a1812
-- `http://lifetea.org/images/1023.jpg` — 文章 a1812
-- `http://lifetea.org/images/1024.jpg` — 文章 a1812
-- `http://lifetea.org/images/1025.jpg` — 文章 a1814
-- `http://lifetea.org/images/1027.jpg` — 文章 a1814
-- `http://lifetea.org/images/1029.jpg` — 文章 a1816
-- `http://lifetea.org/images/1030.jpg` — 文章 a1817
-- `http://lifetea.org/images/1032.jpg` — 文章 a1817
-- `http://lifetea.org/images/1033.jpg` — 文章 a1817
-- `http://lifetea.org/images/1034.jpg` — 文章 a1817
-- `http://lifetea.org/images/1035.jpg` — 文章 a1817
-- `http://lifetea.org/images/1036.jpg` — 文章 a1817
-- `http://lifetea.org/images/1037.jpg` — 文章 a1817
-- `http://lifetea.org/images/1038.jpg` — 文章 a1817
-- `http://lifetea.org/images/1039.jpg` — 文章 a1820
-- `http://lifetea.org/images/1040.jpg` — 文章 a1820
-- `http://lifetea.org/images/1041.jpg` — 文章 a1820
-- `http://lifetea.org/images/1044.jpg` — 文章 a1822
-- `http://lifetea.org/images/1046.jpg` — 文章 a1823
-- `http://lifetea.org/images/1048.jpg` — 文章 a1825
-- `http://lifetea.org/images/1049.jpg` — 文章 a1825
-- `http://lifetea.org/images/1050.jpg` — 文章 a1825
-- `http://lifetea.org/images/1051.jpg` — 文章 a1825
-- `http://lifetea.org/images/1052.jpg` — 文章 a1825
-- `http://lifetea.org/images/1053.jpg` — 文章 a1825
-- `http://lifetea.org/images/1057.jpg` — 文章 a1828
-- `http://lifetea.org/images/1058.jpg` — 文章 a1828
-- `http://lifetea.org/images/1059.jpg` — 文章 a1826
-- `http://lifetea.org/images/1062.jpg` — 文章 a1829
-- `http://lifetea.org/images/1063.jpg` — 文章 a1829
-- `http://lifetea.org/images/1064.jpg` — 文章 a1829
-- `http://lifetea.org/images/1065.jpg` — 文章 a1829
-- `http://lifetea.org/images/1066.jpg` — 文章 a1829
-- `http://lifetea.org/images/107.jpg` — 文章 a1465
-- `http://lifetea.org/images/1072.jpg` — 文章 a1832
-- `http://lifetea.org/images/1073.jpg` — 文章 a1832
-- `http://lifetea.org/images/1077.jpg` — 文章 a1832
-- `http://lifetea.org/images/1078.jpg` — 文章 a1832
-- `http://lifetea.org/images/1079.jpg` — 文章 a1832
-- `http://lifetea.org/images/1080.jpg` — 文章 a1832
-- `http://lifetea.org/images/1083.jpg` — 文章 a1833
-- `http://lifetea.org/images/1084.jpg` — 文章 a1833
-- `http://lifetea.org/images/1087.jpg` — 文章 a1833
-- `http://lifetea.org/images/1088.jpg` — 文章 a1833
-- `http://lifetea.org/images/1089.jpg` — 文章 a1833
-- `http://lifetea.org/images/109.jpg` — 文章 a1465
-- `http://lifetea.org/images/1090.jpg` — 文章 a1833
-- `http://lifetea.org/images/1091.jpg` — 文章 a1833
-- `http://lifetea.org/images/1094.jpg` — 文章 a1834
-- `http://lifetea.org/images/1095.jpg` — 文章 a1834
-- `http://lifetea.org/images/1096.jpg` — 文章 a1834
-- `http://lifetea.org/images/1097.jpg` — 文章 a1835
-- `http://lifetea.org/images/110.jpg` — 文章 a1465
-- `http://lifetea.org/images/1105.jpg` — 文章 a1838
-- `http://lifetea.org/images/1106.jpg` — 文章 a1839
-- `http://lifetea.org/images/111.jpg` — 文章 a1465
-- `http://lifetea.org/images/1110.jpg` — 文章 a1840
-- `http://lifetea.org/images/1112.jpg` — 文章 a1840
-- `http://lifetea.org/images/1113.jpg` — 文章 a1841
 - `http://lifetea.org/images/1114.jpg` — 文章 a1842
 - `http://lifetea.org/images/1115.jpg` — 文章 a1842
 - `http://lifetea.org/images/1116.jpg` — 文章 a1842
 - `http://lifetea.org/images/1118.jpg` — 文章 a1842
-- `http://lifetea.org/images/1119.jpg` — 文章 a1843
-- `http://lifetea.org/images/1120.jpg` — 文章 a1843
-- `http://lifetea.org/images/1121.jpg` — 文章 a1844
-- `http://lifetea.org/images/1122.jpg` — 文章 a1844
-- `http://lifetea.org/images/1123.jpg` — 文章 a1844
-- `http://lifetea.org/images/1124.jpg` — 文章 a1844
-- `http://lifetea.org/images/1125.jpg` — 文章 a1846
-- `http://lifetea.org/images/1126.jpg` — 文章 a1846
-- `http://lifetea.org/images/1127.jpg` — 文章 a1846
-- `http://lifetea.org/images/1128.jpg` — 文章 a1846
-- `http://lifetea.org/images/1129.jpg` — 文章 a1846
-- `http://lifetea.org/images/1130.jpg` — 文章 a1846
-- `http://lifetea.org/images/1131.gif` — 文章 a1847
-- `http://lifetea.org/images/1132.jpg` — 文章 a1847
-- `http://lifetea.org/images/1133.gif` — 文章 a1847
-- `http://lifetea.org/images/1134.jpg` — 文章 a1847
-- `http://lifetea.org/images/1135.jpg` — 文章 a1847
-- `http://lifetea.org/images/1136.gif` — 文章 a1847
-- `http://lifetea.org/images/1137.gif` — 文章 a1848
-- `http://lifetea.org/images/1138.gif` — 文章 a1848
-- `http://lifetea.org/images/1139.gif` — 文章 a1848
-- `http://lifetea.org/images/1140.gif` — 文章 a1848
-- `http://lifetea.org/images/1141.gif` — 文章 a1848
-- `http://lifetea.org/images/1142.gif` — 文章 a1848
-- `http://lifetea.org/images/1143.jpg` — 文章 a1849
-- `http://lifetea.org/images/1144.jpg` — 文章 a1849
-- `http://lifetea.org/images/1145.jpg` — 文章 a1850
-- `http://lifetea.org/images/1146.jpg` — 文章 a1850
-- `http://lifetea.org/images/1148.jpg` — 文章 a1850
-- `http://lifetea.org/images/1149.jpg` — 文章 a1850
 - `http://lifetea.org/images/1151.jpg` — 文章 a1853
 - `http://lifetea.org/images/1152.jpg` — 文章 a1854
 - `http://lifetea.org/images/1153.jpg` — 文章 a1855
@@ -4257,8 +4106,8 @@
 - `http://lifetea.org/images/5005.jpg` — 文章 a2789
 - `http://lifetea.org/images/5006.jpg` — 文章 a2789
 - `http://lifetea.org/images/5009.jpg` — 文章 a2790
-- `http://lifetea.org/images/500x500x5526.jpg.pagespeed.ic.2DTzJ1j1A0.jpg` — 文章 a2926
-- `http://lifetea.org/images/500x500x5527.jpg.pagespeed.ic.Zn9P7-Y4j8.jpg` — 文章 a2926
+- `http://lifetea.org/images/500x333x5535.jpg.pagespeed.ic.3LN9FrrT-H.jpg` — 文章 a2928
+- `http://lifetea.org/images/500x333x5545.jpg.pagespeed.ic.oJFQkWUNQK.jpg` — 文章 a2931
 - `http://lifetea.org/images/501.jpg` — 文章 a1633
 - `http://lifetea.org/images/5012.jpg` — 文章 a2790
 - `http://lifetea.org/images/5013.jpg` — 文章 a2790
@@ -4575,9 +4424,29 @@
 - `http://lifetea.org/images/5521.jpg.pagespeed.ce.q50Tubd4st.jpg` — 文章 a2922
 - `http://lifetea.org/images/5522.jpg.pagespeed.ce.fIuRZu13Ls.jpg` — 文章 a2923
 - `http://lifetea.org/images/553.jpg` — 文章 a1657
+- `http://lifetea.org/images/5532.jpg` — 文章 a2928
+- `http://lifetea.org/images/5534.jpg` — 文章 a2928
+- `http://lifetea.org/images/5537.jpg` — 文章 a2929
+- `http://lifetea.org/images/5538.jpg` — 文章 a2930
+- `http://lifetea.org/images/5539.jpg` — 文章 a2930
 - `http://lifetea.org/images/554.jpg` — 文章 a1657
+- `http://lifetea.org/images/5542.jpg` — 文章 a2930
+- `http://lifetea.org/images/5543.jpg` — 文章 a2930
+- `http://lifetea.org/images/5544.jpg` — 文章 a2930
+- `http://lifetea.org/images/5546.jpg` — 文章 a2931
+- `http://lifetea.org/images/5547.jpg` — 文章 a2931
+- `http://lifetea.org/images/5548.jpg` — 文章 a2931
+- `http://lifetea.org/images/5549.jpg` — 文章 a2931
 - `http://lifetea.org/images/555.jpg` — 文章 a1657
+- `http://lifetea.org/images/5550.jpg` — 文章 a2931
+- `http://lifetea.org/images/5551.jpg` — 文章 a2931
+- `http://lifetea.org/images/5552.jpg` — 文章 a2931
+- `http://lifetea.org/images/5553.jpg` — 文章 a2931
 - `http://lifetea.org/images/556.jpg` — 文章 a1657
+- `http://lifetea.org/images/5563.jpg` — 文章 a2932
+- `http://lifetea.org/images/5564.jpg` — 文章 a2932
+- `http://lifetea.org/images/5565.jpg` — 文章 a2932
+- `http://lifetea.org/images/5566.jpg` — 文章 a2932
 - `http://lifetea.org/images/5572.jpg` — 文章 a2933
 - `http://lifetea.org/images/5573.jpg` — 文章 a2934
 - `http://lifetea.org/images/5574.jpg` — 文章 a2934
@@ -4586,6 +4455,7 @@
 - `http://lifetea.org/images/5579.jpg` — 文章 a2935
 - `http://lifetea.org/images/5580.jpg` — 文章 a2935
 - `http://lifetea.org/images/5581.jpg` — 文章 a2935
+- `http://lifetea.org/images/5582.jpg` — 文章 a2936
 - `http://lifetea.org/images/559.jpg` — 文章 a1659
 - `http://lifetea.org/images/560.jpg` — 文章 a1658
 - `http://lifetea.org/images/561.jpg` — 文章 a1661
@@ -4783,6 +4653,7 @@
 - `http://lifetea.org/images/807.jpg` — 文章 a1715
 - `http://lifetea.org/images/808.jpg` — 文章 a1715
 - `http://lifetea.org/images/809.jpg` — 文章 a1715
+- `http://lifetea.org/images/81.jpg` — 文章 a1452
 - `http://lifetea.org/images/810.jpg` — 文章 a1715
 - `http://lifetea.org/images/811.jpg` — 文章 a1715
 - `http://lifetea.org/images/812.jpg` — 文章 a1715
@@ -4801,6 +4672,7 @@
 - `http://lifetea.org/images/827.jpg` — 文章 a1718
 - `http://lifetea.org/images/828.jpg` — 文章 a1718
 - `http://lifetea.org/images/829.jpg` — 文章 a1718
+- `http://lifetea.org/images/83.jpg` — 文章 a1452
 - `http://lifetea.org/images/830.jpg` — 文章 a1718
 - `http://lifetea.org/images/831.jpg` — 文章 a1718
 - `http://lifetea.org/images/832.jpg` — 文章 a1718
