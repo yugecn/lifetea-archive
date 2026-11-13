@@ -2,11 +2,11 @@
 
 ## 抓取失败的文章 ID（Wayback 有记录但取不到正文）
 
-378, 626, 627, 628, 629, 631, 642, 646, 652, 663, 1042, 1624, 1697, 1698
+378, 626, 627, 628, 629, 631, 642, 646, 652, 663, 1042, 1624, 1697, 1698, 1802
 
 ## 尚未抓取的文章 ID（抓取仍在进行）
 
-548, 573, 1700, 1701, 1702, 1704, 1705, 1706, 1707, 1708, 1716, 1719, 1720, 1723, 1724, 1726, 1727, 1729, 1730, 1731, 1734, 1738, 1739, 1740, 1741, 1742, 1743, 1744, 1745, 1746, 1747, 1748, 1749, 1751, 1755, 1756, 1757, 1759, 1760, 1761, 1762, 1763, 1764, 1765, 1767, 1768, 1769, 1770, 1782, 1783, 1784, 1785, 1786, 1787, 1788, 1790, 1791, 1792, 1795, 1796, 1797, 1798, 1799, 1800, 1801, 1802, 1804, 1805, 1806, 1810, 1811, 1812, 1813, 1814, 1815, 1816, 1817, 1818, 1820, 1821, 1822, 1823, 1827, 1828, 1829, 1834, 1835, 1836, 1838, 1839, 1840, 1841, 1842, 1843, 1844, 1845, 1846, 1847, 1848, 1849, 1850, 1851, 1853, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 2023, 2043, 2044, 2052, 2062, 2070, 2080, 2082, 2099, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116, 2117, 2118, 2127, 2128, 2129, 2130, 2131, 2132, 2133, 2134, 2136, 2137, 2138, 2139, 2140, 2141, 2142, 2143, 2144, 2146, 2147, 2149, 2150, 2151, 2152, 2153, 2154, 2155, 2156, 2157, 2158, 2159, 2160, 2162, 2163, 2165, 2166, 2167, 2168, 2169, 2170, 2171, 2172, 2173, 2174, 2176, 2177, 2178, 2180, 2181, 2182, 2184, 2185, 2186, 2187, 2188, 2190, 2191, 2193, 2194, 2195, 2198, 2199, 2200, 2202, 2203, 2204, 2205, 2206, 2207, 2209, 2210, 2211, 2212, 2213, 2214, 2215, 2216, 2217, 2218, 2219, 2220, 2221, 2222, 2223, 2224, 2225, 2226, 2227, 2228, 2229, 2230, 2231, 2232, 2233, 2234, 2235, 2236, 2237, 2238, 2239, 2240, 2241, 2242, 2243, 2244, 2245, 2246, 2247, 2248, 2249, 2250, 2251, 2252, 2253, 2254, 2255, 2256, 2257, 2258, 2259, 2260, 2261, 2262, 2263, 2264, 2265, 2266, 2267, 2268, 2269, 2270, 2271, 2272, 2273, 2274, 2275, 2276, 2277, 2278, 2280, 2281, 2282, 2283, 2284, 2285, 2286, 2287, 2288, 2289, 2291, 2292, 2293, 2295, 2296, 2297, 2298, 2299, 2300, 2301, 2302, 2361, 2362, 2364, 2365, 2366, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2375, 2376, 2377, 2378, 2379, 2380, 2381, 2382, 2383, 2384, 2385, 2386, 2388, 2389, 2390, 2391, 2392, 2393, 2394, 2395, 2396, 2397, 2398, 2399, 2401, 2402, 2403, 2404, 2405, 2406, 2407, 2408, 2410, 2411, 2412, 2413, 2415, 2416, 2417, 2418, 2419, 2421, 2422, 2423, 2424, 2425, 2426, 2427, 2428, 2429, 2430, 2431, 2432, 2433, 2434, 2435, 2436, 2437, 2438, 2439, 2440, 2441, 2442, 2443, 2444, 2445, 2446, 2447, 2448, 2449, 2450, 2451, 2452, 2453, 2454, 2455, 2456, 2457, 2462, 2463, 2464, 2470, 2472, 2473, 2474, 2477, 2484, 2485, 2486, 2487, 2488, 2489, 2490, 2491, 2492, 2493, 2494, 2495, 2500, 2501, 2502, 2503, 2504, 2505, 2512, 2514, 2515, 2516, 2518, 2519, 2521, 2522, 2523, 2524, 2525, 2526, 2527, 2528, 2529, 2530, 2531, 2532, 2533, 2534, 2535, 2536, 2537, 2585, 2586, 2587, 2588, 2589, 2591, 2592, 2593, 2594, 2595, 2596, 2598, 2599, 2600, 2601, 2602, 2603, 2604, 2605, 2606, 2607, 2609, 2610, 2611, 2612, 2613, 2614, 2615, 2616, 2617, 2618, 2619, 2620, 2622, 2623, 2625, 2626, 2627, 2628, 2629, 2630, 2631, 2632, 2633, 2634, 2638, 2639, 2640, 2641, 2642, 2643, 2644, 2645, 2646, 2647, 2648, 2649, 2650, 2651, 2652, 2673, 2742, 2743, 2744, 2745, 2746, 2747, 2748, 2749, 2750, 2751, 2752, 2753, 2754, 2755, 2756, 2757, 2758, 2760, 2761, 2762, 2763, 2764, 2766, 2767, 2768, 2769, 2770, 2771, 2772, 2773, 2774, 2775, 2776, 2777, 2778, 2780, 2781, 2782, 2783, 2784, 2785, 2786, 2787, 2788, 2789, 2790, 2791, 2792, 2793, 2794, 2795, 2796, 2800, 2801, 2802, 2803, 2804, 2805, 2807, 2808, 2809, 2811, 2812, 2813, 2814, 2815, 2816, 2817, 2819, 2824, 2830, 2831, 2833, 2835, 2836, 2837, 2839, 2840, 2842, 2844, 2845, 2846, 2847, 2848, 2849, 2850, 2851, 2853, 2854, 2855, 2856, 2859, 2861, 2862, 2869, 2871, 2876, 2878, 2879, 2880, 2881, 2883, 2884, 2885, 2886, 2887, 2888, 2890, 2891, 2892, 2896, 2897, 2898, 2900, 2902, 2903, 2927, 2928, 2929, 2930, 2931, 2932, 2936
+548, 573, 1805, 1806, 1810, 1811, 1812, 1813, 1814, 1815, 1816, 1817, 1818, 1820, 1821, 1822, 1823, 1827, 1828, 1829, 1834, 1835, 1836, 1838, 1839, 1840, 1841, 1842, 1843, 1844, 1845, 1846, 1847, 1848, 1849, 1850, 1851, 1853, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1861, 2023, 2043, 2044, 2052, 2062, 2070, 2080, 2082, 2099, 2101, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2112, 2113, 2114, 2115, 2116, 2117, 2118, 2127, 2128, 2129, 2130, 2131, 2132, 2133, 2134, 2136, 2137, 2138, 2139, 2140, 2141, 2142, 2143, 2144, 2146, 2147, 2149, 2150, 2151, 2152, 2153, 2154, 2155, 2156, 2157, 2158, 2159, 2160, 2162, 2163, 2165, 2166, 2167, 2168, 2169, 2170, 2171, 2172, 2173, 2174, 2176, 2177, 2178, 2180, 2181, 2182, 2184, 2185, 2186, 2187, 2188, 2190, 2191, 2193, 2194, 2195, 2198, 2199, 2200, 2202, 2203, 2204, 2205, 2206, 2207, 2209, 2210, 2211, 2212, 2213, 2214, 2215, 2216, 2217, 2218, 2219, 2220, 2221, 2222, 2223, 2224, 2225, 2226, 2227, 2228, 2229, 2230, 2231, 2232, 2233, 2234, 2235, 2236, 2237, 2238, 2239, 2240, 2241, 2242, 2243, 2244, 2245, 2246, 2247, 2248, 2249, 2250, 2251, 2252, 2253, 2254, 2255, 2256, 2257, 2258, 2259, 2260, 2261, 2262, 2263, 2264, 2265, 2266, 2267, 2268, 2269, 2270, 2271, 2272, 2273, 2274, 2275, 2276, 2277, 2278, 2280, 2281, 2282, 2283, 2284, 2285, 2286, 2287, 2288, 2289, 2291, 2292, 2293, 2295, 2296, 2297, 2298, 2299, 2300, 2301, 2302, 2361, 2362, 2364, 2365, 2366, 2367, 2368, 2369, 2370, 2371, 2372, 2373, 2375, 2376, 2377, 2378, 2379, 2380, 2381, 2382, 2383, 2384, 2385, 2386, 2388, 2389, 2390, 2391, 2392, 2393, 2394, 2395, 2396, 2397, 2398, 2399, 2401, 2402, 2403, 2404, 2405, 2406, 2407, 2408, 2410, 2411, 2412, 2413, 2415, 2416, 2417, 2418, 2419, 2421, 2422, 2423, 2424, 2425, 2426, 2427, 2428, 2429, 2430, 2431, 2432, 2433, 2434, 2435, 2436, 2437, 2438, 2439, 2440, 2441, 2442, 2443, 2444, 2445, 2446, 2447, 2448, 2449, 2450, 2451, 2452, 2453, 2454, 2455, 2456, 2457, 2462, 2463, 2464, 2470, 2472, 2473, 2474, 2477, 2484, 2485, 2486, 2487, 2488, 2489, 2490, 2491, 2492, 2493, 2494, 2495, 2500, 2501, 2502, 2503, 2504, 2505, 2512, 2514, 2515, 2516, 2518, 2519, 2521, 2522, 2523, 2524, 2525, 2526, 2527, 2528, 2529, 2530, 2531, 2532, 2533, 2534, 2535, 2536, 2537, 2585, 2586, 2587, 2588, 2589, 2591, 2592, 2593, 2594, 2595, 2596, 2598, 2599, 2600, 2601, 2602, 2603, 2604, 2605, 2606, 2607, 2609, 2610, 2611, 2612, 2613, 2614, 2615, 2616, 2617, 2618, 2619, 2620, 2622, 2623, 2625, 2626, 2627, 2628, 2629, 2630, 2631, 2632, 2633, 2634, 2638, 2639, 2640, 2641, 2642, 2643, 2644, 2645, 2646, 2647, 2648, 2649, 2650, 2651, 2652, 2673, 2742, 2743, 2744, 2745, 2746, 2747, 2748, 2749, 2750, 2751, 2752, 2753, 2754, 2755, 2756, 2757, 2758, 2760, 2761, 2762, 2763, 2764, 2766, 2767, 2768, 2769, 2770, 2771, 2772, 2773, 2774, 2775, 2776, 2777, 2778, 2780, 2781, 2782, 2783, 2784, 2785, 2786, 2787, 2788, 2789, 2790, 2791, 2792, 2793, 2794, 2795, 2796, 2800, 2801, 2802, 2803, 2804, 2805, 2807, 2808, 2809, 2811, 2812, 2813, 2814, 2815, 2816, 2817, 2819, 2824, 2830, 2831, 2833, 2835, 2836, 2837, 2839, 2840, 2842, 2844, 2845, 2846, 2847, 2848, 2849, 2850, 2851, 2853, 2854, 2855, 2856, 2859, 2861, 2862, 2869, 2871, 2876, 2878, 2879, 2880, 2881, 2883, 2884, 2885, 2886, 2887, 2888, 2890, 2891, 2892, 2896, 2897, 2898, 2900, 2902, 2903, 2927, 2928, 2929, 2930, 2931, 2932, 2936
 
 ## 文章中引用但未能取得的图片
 
@@ -1182,7 +1182,20 @@
 - `/images/箭头_1.jpg` — 文章 a365
 - `http://christina.tecinese.com/images/- 075_01.jpg` — 文章 a1124
 - `http://lifetea.org/images/100.jpg` — 文章 a1463
+- `http://lifetea.org/images/1000.jpg` — 文章 a1804
+- `http://lifetea.org/images/1001.jpg` — 文章 a1804
+- `http://lifetea.org/images/1002.jpg` — 文章 a1804
+- `http://lifetea.org/images/1003.jpg` — 文章 a1804
+- `http://lifetea.org/images/1004.jpg` — 文章 a1804
+- `http://lifetea.org/images/1005.jpg` — 文章 a1804
+- `http://lifetea.org/images/1006.jpg` — 文章 a1804
+- `http://lifetea.org/images/1008.jpg` — 文章 a1804
+- `http://lifetea.org/images/1009.jpg` — 文章 a1804
 - `http://lifetea.org/images/101.jpg` — 文章 a1463
+- `http://lifetea.org/images/1010.jpg` — 文章 a1804
+- `http://lifetea.org/images/1011.jpg` — 文章 a1804
+- `http://lifetea.org/images/1012.jpg` — 文章 a1804
+- `http://lifetea.org/images/1013.jpg` — 文章 a1804
 - `http://lifetea.org/images/102.jpg` — 文章 a1463
 - `http://lifetea.org/images/1048.jpg` — 文章 a1825
 - `http://lifetea.org/images/1049.jpg` — 文章 a1825
@@ -2729,11 +2742,49 @@
 - `http://lifetea.org/images/673.jpg` — 文章 a1697
 - `http://lifetea.org/images/674.jpg` — 文章 a1697
 - `http://lifetea.org/images/677.jpg` — 文章 a1698
+- `http://lifetea.org/images/678.jpg` — 文章 a1700
+- `http://lifetea.org/images/679.jpg` — 文章 a1700
 - `http://lifetea.org/images/68.jpg` — 文章 a648
+- `http://lifetea.org/images/680.jpg` — 文章 a1700
+- `http://lifetea.org/images/681.jpg` — 文章 a1700
+- `http://lifetea.org/images/682.jpg` — 文章 a1700
+- `http://lifetea.org/images/683.jpg` — 文章 a1700
+- `http://lifetea.org/images/685.jpg` — 文章 a1700
+- `http://lifetea.org/images/686.jpg` — 文章 a1700
+- `http://lifetea.org/images/687.jpg` — 文章 a1701
+- `http://lifetea.org/images/688.jpg` — 文章 a1701
 - `http://lifetea.org/images/69.jpg` — 文章 a648
+- `http://lifetea.org/images/691.jpg` — 文章 a1701
+- `http://lifetea.org/images/693.jpg` — 文章 a1701
+- `http://lifetea.org/images/694.jpg` — 文章 a1701
+- `http://lifetea.org/images/695.jpg` — 文章 a1701
+- `http://lifetea.org/images/696.jpg` — 文章 a1701
+- `http://lifetea.org/images/697.jpg` — 文章 a1701
+- `http://lifetea.org/images/698.jpg` — 文章 a1701
+- `http://lifetea.org/images/699.jpg` — 文章 a1701
 - `http://lifetea.org/images/70.jpg` — 文章 a649
+- `http://lifetea.org/images/700.jpg` — 文章 a1701
+- `http://lifetea.org/images/701.jpg` — 文章 a1701
+- `http://lifetea.org/images/702.jpg` — 文章 a1702
+- `http://lifetea.org/images/703.jpg` — 文章 a1702
+- `http://lifetea.org/images/704.jpg` — 文章 a1702
 - `http://lifetea.org/images/71.jpg` — 文章 a1444
+- `http://lifetea.org/images/711.jpg` — 文章 a1704
+- `http://lifetea.org/images/714.jpg` — 文章 a1707
+- `http://lifetea.org/images/715.jpg` — 文章 a1708
+- `http://lifetea.org/images/716.jpg` — 文章 a1708
+- `http://lifetea.org/images/717.jpg` — 文章 a1708
+- `http://lifetea.org/images/718.jpg` — 文章 a1708
+- `http://lifetea.org/images/719.jpg` — 文章 a1708
 - `http://lifetea.org/images/72.jpg` — 文章 a1444
+- `http://lifetea.org/images/720.jpg` — 文章 a1708
+- `http://lifetea.org/images/721.jpg` — 文章 a1708
+- `http://lifetea.org/images/722.jpg` — 文章 a1708
+- `http://lifetea.org/images/723.jpg` — 文章 a1708
+- `http://lifetea.org/images/724.jpg` — 文章 a1708
+- `http://lifetea.org/images/725.jpg` — 文章 a1708
+- `http://lifetea.org/images/726.jpg` — 文章 a1708
+- `http://lifetea.org/images/727.jpg` — 文章 a1708
 - `http://lifetea.org/images/728.jpg` — 文章 a1709
 - `http://lifetea.org/images/729.jpg` — 文章 a1709
 - `http://lifetea.org/images/73.jpg` — 文章 a1444
@@ -2841,13 +2892,70 @@
 - `http://lifetea.org/images/833.jpg` — 文章 a1718
 - `http://lifetea.org/images/836.jpg` — 文章 a1711
 - `http://lifetea.org/images/837.jpg` — 文章 a1715
+- `http://lifetea.org/images/838.jpg` — 文章 a1720
+- `http://lifetea.org/images/840.jpg` — 文章 a1724
+- `http://lifetea.org/images/842.jpg` — 文章 a1729
+- `http://lifetea.org/images/843.jpg` — 文章 a1723
+- `http://lifetea.org/images/845.jpg` — 文章 a1730
+- `http://lifetea.org/images/846.jpg` — 文章 a1731
+- `http://lifetea.org/images/847.jpg` — 文章 a1731
 - `http://lifetea.org/images/85.jpg` — 文章 a1453
+- `http://lifetea.org/images/852.jpg` — 文章 a1734
+- `http://lifetea.org/images/858.jpg` — 文章 a1738
 - `http://lifetea.org/images/86.jpg` — 文章 a1454
+- `http://lifetea.org/images/862.jpg` — 文章 a1739
+- `http://lifetea.org/images/863.jpg` — 文章 a1739
+- `http://lifetea.org/images/864.jpg` — 文章 a1740
+- `http://lifetea.org/images/865.jpg` — 文章 a1740
+- `http://lifetea.org/images/866.jpg` — 文章 a1740
+- `http://lifetea.org/images/867.jpg` — 文章 a1740
 - `http://lifetea.org/images/87.jpg` — 文章 a1454
+- `http://lifetea.org/images/872.jpg` — 文章 a1741
+- `http://lifetea.org/images/876.jpg` — 文章 a1745
+- `http://lifetea.org/images/877.jpg` — 文章 a1745
+- `http://lifetea.org/images/878.jpg` — 文章 a1747
+- `http://lifetea.org/images/879.jpg` — 文章 a1747
+- `http://lifetea.org/images/880.jpg` — 文章 a1747
+- `http://lifetea.org/images/881.jpg` — 文章 a1748
+- `http://lifetea.org/images/882.jpg` — 文章 a1748
+- `http://lifetea.org/images/883.jpg` — 文章 a1748
+- `http://lifetea.org/images/885.jpg` — 文章 a1749
+- `http://lifetea.org/images/887.jpg` — 文章 a1749
+- `http://lifetea.org/images/888.jpg` — 文章 a1749
+- `http://lifetea.org/images/889.jpg` — 文章 a1749
+- `http://lifetea.org/images/890.jpg` — 文章 a1749
+- `http://lifetea.org/images/892.jpg` — 文章 a1755
+- `http://lifetea.org/images/893.jpg` — 文章 a1755
+- `http://lifetea.org/images/894.jpg` — 文章 a1755
+- `http://lifetea.org/images/895.jpg` — 文章 a1755
+- `http://lifetea.org/images/896.jpg` — 文章 a1755
+- `http://lifetea.org/images/897.jpg` — 文章 a1756
+- `http://lifetea.org/images/898.jpg` — 文章 a1756
+- `http://lifetea.org/images/899.jpg` — 文章 a1756
+- `http://lifetea.org/images/900.jpg` — 文章 a1756
+- `http://lifetea.org/images/906.jpg` — 文章 a1757
+- `http://lifetea.org/images/907.jpg` — 文章 a1757
+- `http://lifetea.org/images/908.jpg` — 文章 a1757
+- `http://lifetea.org/images/909.jpg` — 文章 a1757
 - `http://lifetea.org/images/91.jpg` — 文章 a1458
+- `http://lifetea.org/images/911.jpg` — 文章 a1757
+- `http://lifetea.org/images/912.jpg` — 文章 a1757
+- `http://lifetea.org/images/913.jpg` — 文章 a1757
+- `http://lifetea.org/images/914.jpg` — 文章 a1757
+- `http://lifetea.org/images/915.jpg` — 文章 a1757
+- `http://lifetea.org/images/916.jpg` — 文章 a1759
 - `http://lifetea.org/images/92.jpg` — 文章 a1458
+- `http://lifetea.org/images/920.jpg` — 文章 a1762
+- `http://lifetea.org/images/921.jpg` — 文章 a1763
+- `http://lifetea.org/images/923.jpg` — 文章 a1765
 - `http://lifetea.org/images/926.png` — 文章 a1766
+- `http://lifetea.org/images/928.jpg` — 文章 a1768
+- `http://lifetea.org/images/929.jpg` — 文章 a1768
 - `http://lifetea.org/images/93.jpg` — 文章 a1458
+- `http://lifetea.org/images/930.jpg` — 文章 a1769
+- `http://lifetea.org/images/931.jpg` — 文章 a1769
+- `http://lifetea.org/images/932.jpg` — 文章 a1769
+- `http://lifetea.org/images/936.jpg` — 文章 a1770
 - `http://lifetea.org/images/937.jpg` — 文章 a1771
 - `http://lifetea.org/images/938.jpg` — 文章 a1771
 - `http://lifetea.org/images/939.jpg` — 文章 a1772
@@ -2858,8 +2966,34 @@
 - `http://lifetea.org/images/946.jpg` — 文章 a1776
 - `http://lifetea.org/images/947.jpg` — 文章 a1780
 - `http://lifetea.org/images/948.jpg` — 文章 a1780
+- `http://lifetea.org/images/951.jpg` — 文章 a1784
+- `http://lifetea.org/images/952.jpg` — 文章 a1785
+- `http://lifetea.org/images/953.jpg` — 文章 a1787
+- `http://lifetea.org/images/958.jpg` — 文章 a1788
+- `http://lifetea.org/images/959.jpg` — 文章 a1788
 - `http://lifetea.org/images/960.jpg` — 文章 a1789
+- `http://lifetea.org/images/961.jpg` — 文章 a1790
+- `http://lifetea.org/images/962.jpg` — 文章 a1790
+- `http://lifetea.org/images/966.jpg` — 文章 a1792
+- `http://lifetea.org/images/967.jpg` — 文章 a1795
+- `http://lifetea.org/images/968.jpg` — 文章 a1796
+- `http://lifetea.org/images/971.jpg` — 文章 a1796
+- `http://lifetea.org/images/973.jpg` — 文章 a1797
+- `http://lifetea.org/images/977.jpg` — 文章 a1797
+- `http://lifetea.org/images/978.jpg` — 文章 a1797
+- `http://lifetea.org/images/979.jpg` — 文章 a1797
 - `http://lifetea.org/images/98.jpg` — 文章 a1461
+- `http://lifetea.org/images/980.jpg` — 文章 a1797
+- `http://lifetea.org/images/981.jpg` — 文章 a1797
+- `http://lifetea.org/images/983.jpg` — 文章 a1798
+- `http://lifetea.org/images/984.jpg` — 文章 a1800
+- `http://lifetea.org/images/993.jpg` — 文章 a1804
+- `http://lifetea.org/images/994.jpg` — 文章 a1804
+- `http://lifetea.org/images/995.jpg` — 文章 a1804
+- `http://lifetea.org/images/996.jpg` — 文章 a1804
+- `http://lifetea.org/images/997.jpg` — 文章 a1804
+- `http://lifetea.org/images/998.jpg` — 文章 a1804
+- `http://lifetea.org/images/999.jpg` — 文章 a1804
 - `http://www.longhoo.net/gb/longhoo/joy/travel/nanjing/jinling/zhongshan/images/00004638.gif` — 文章 a900
 - `http://www.tecinese.com/images/Pregnancy serie.jpg` — 文章 a613
 - `m/images/DSC00949_01.jpg` — 文章 a15
