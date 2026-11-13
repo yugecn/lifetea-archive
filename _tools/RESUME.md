@@ -22,3 +22,6 @@ Common Crawl post pass (2026-11-13):
 - Gaps: archive_index.json lists 2,089 ids; ~830 still missing, of which ~742 have Wayback snapshots still in fetch2's page queue (ids 1507+), ~88 nowhere.
 - Images: CC has no image records. Images of CC posts already in fetch2's main.txt queue are fetched normally; 138 /images/* refs absent
   from the Wayback CDX were written to _raw/extra_img.txt, which fetch2.py now appends as jobs at the end (likely mostly .fail). No Wayback fetch was run in this pass.
+
+Image retry pass (2026-11-13): after fetch2.done, run `cd _raw && IV=7 python3 retry_fail.py` (background). It retries every img/*.fail with other Wayback capture dates (both hosts); writes .fail2 when nothing works; done marker _raw/retry_fail.done. Then sync/push.
+Album: full paged CDX of photo.lifetea.org in _raw/album/full_*.txt (cdx_all.py); older cdx_www_photo.txt/cdx_imagestation.txt were truncated at 1000/2000 rows.
