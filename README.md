@@ -14,7 +14,7 @@ christina@Nanjing 的博客 **lifetea.org**（“Chinese Tea”，Textpattern �
 | Wayback 中存有快照的文章 ID | 2057（原文章 ID 最大为 2936，未被存档的 ID 无法恢复） |
 | 已下载图片 | 92 / 4665（Wayback 中有快照的图片） |
 | 文章引用但未能取得的图片 | 2622 |
-| 存档体积（posts + images） | 9.5 MB |
+| 存档体积（posts + images） | 14.9 MB |
 | 尚未抓取（待续） | 766 篇 |
 
 更新于 2026-11-13。
