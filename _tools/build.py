@@ -4,18 +4,33 @@ from parse import parse,unq
 from markdownify import markdownify as md
 ROOT='/workspace/work/lifetea'; RAW=ROOT+'/_raw'
 posts={}
+def score(p):
+    # individual page > listing copy; then more comments; then Wayback over CC on ties; then newer capture
+    return (1 if p['_ind'] else 0, len(p['comments'] or []), 1 if p['source']=='wayback' else 0, p['ts'])
+def add(p):
+    if p['id'] is None: return
+    if p['id'] not in posts or score(p)>score(posts[p['id']]): posts[p['id']]=p
 files=sorted(glob.glob(RAW+'/pages/*.html'))
 for f in files:
     if not os.path.exists(f+'.src'): continue
     isind=not os.path.basename(f).startswith('o')
     for p in parse(f):
-        if p['id'] is None: continue
-        if p['id'] in posts and (posts[p['id']].get('_ind') and not isind): continue
-        if p['id'] in posts and not isind: continue
-        p['_ind']=isind
+        p['_ind']=isind and p.get('comments') is not None
         if not isind: p['comments']=None
-        p.setdefault('comments',None)
-        posts[p['id']]=p
+        p.setdefault('comments',None); p['source']='wayback'
+        add(p)
+# Common Crawl copies (2008-2014 captures), see _raw/cc_pages/README.md
+import warnings; warnings.filterwarnings('ignore')
+for f in sorted(glob.glob(RAW+'/cc_pages/*.html')):
+    if not os.path.exists(f+'.src'): continue
+    ts,u,crawl=open(f+'.src').read().split()
+    try: r=parse(f)
+    except Exception: continue
+    for p in r:
+        p['_ind']=len(r)==1 and '/article/' in u
+        if not p['_ind']: p['comments']=None
+        p.setdefault('comments',None); p['source']='commoncrawl'; p['crawl']=crawl; p['src']=u
+        add(p)
 img_have=set()
 for f in glob.glob(RAW+'/img/**/*',recursive=True):
     if os.path.isfile(f) and not f.endswith(('.src','.fail')): img_have.add(os.path.relpath(f,RAW+'/img'))
@@ -43,8 +58,11 @@ for pid,p in sorted(posts.items()):
     mdb=re.sub(r'\n{3,}','\n\n',mdb)
     y=p['date'][:4] if p['date'] else 'undated'
     fn='%s-a%d.md'%(p['date'] or 'undated',pid)
-    wb='https://web.archive.org/web/%s/%s'%(p['ts'],p['src'])
-    fm='---\ntitle: "%s"\ndate: %s\ncategory: "%s"\npost_id: %d\noriginal_url: "%s"\nwayback_url: "%s"\ncomments: %s\n---\n\n'%(esc(p['title']),p['date'] or '""',esc(p['category']),pid,esc(p['href']),wb,len(p.get('comments') or []) if p.get('comments') is not None else '"not captured"')
+    if p['source']=='wayback':
+        srcl='source: wayback\nwayback_url: "https://web.archive.org/web/%s/%s"\n'%(p['ts'],p['src'])
+    else:
+        srcl='source: commoncrawl\ncrawl: %s\ncapture: "%s %s"\n'%(p['crawl'],p['ts'],esc(p['src']))
+    fm='---\ntitle: "%s"\ndate: %s\ncategory: "%s"\npost_id: %d\noriginal_url: "%s"\n%scomments: %s\n---\n\n'%(esc(p['title']),p['date'] or '""',esc(p['category']),pid,esc(p['href']),srcl,len(p.get('comments') or []) if p.get('comments') is not None else '"not captured"')
     txt=fm+'# '+p['title']+'\n\n'+mdb+'\n'
     if p['comments']:
         txt+='\n---\n\n## 评论（%d）\n\n'%len(p['comments'])
@@ -53,6 +71,6 @@ for pid,p in sorted(posts.items()):
             txt+='**%s** · %s\n\n%s\n\n'%(a,c['date'],md(c['html']).strip())
     os.makedirs(out+'/'+y,exist_ok=True)
     open(out+'/'+y+'/'+fn,'w').write(txt)
-    index.append(dict(id=pid,title=p['title'],date=p['date'],year=y,category=p['category'],path='posts/%s/%s'%(y,fn),ncom=len(p['comments'] or [])))
+    index.append(dict(id=pid,title=p['title'],date=p['date'],year=y,category=p['category'],path='posts/%s/%s'%(y,fn),source=p['source'],ncom=len(p['comments'] or [])))
 json.dump(dict(index=index,missing_img={k:sorted(v) for k,v in missing_img.items()},used_img=sorted(used_img),img_have=len(img_have)),open(ROOT+'/_build.json','w'),ensure_ascii=False,indent=0)
 print('posts',len(index),'img_have',len(img_have),'used',len(used_img),'missing refs',len(missing_img))
