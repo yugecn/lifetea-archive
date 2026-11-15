@@ -12,9 +12,9 @@ christina@Nanjing 的博客 **lifetea.org**（“Chinese Tea”，Textpattern �
 | 评论（随文章一并保存） | 13583 |
 | 博客归档页（Pigeonhole，2012 年 Common Crawl 快照）列出的文章 | 2089（其中已恢复 2042） |
 | Wayback 中存有快照的文章 ID | 2057（原文章 ID 最大为 2936，未被存档的 ID 无法恢复） |
-| 已下载图片 | 4806 / 4665（Wayback 中有快照的图片） |
-| 文章引用但未能取得的图片 | 532 |
-| 存档体积（posts + images） | 275.5 MB |
+| 已下载图片 | 5001 / 4665（Wayback 中有快照的图片） |
+| 文章引用但未能取得的图片 | 527 |
+| 存档体积（posts + images） | 275.9 MB |
 
 更新于 2026-11-15。
 
