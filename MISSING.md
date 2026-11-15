@@ -349,8 +349,6 @@
 - `http://lifetea.org/images/5096.jpg` — 文章 a2804
 - `http://lifetea.org/images/5097.jpg` — 文章 a2804
 - `http://lifetea.org/images/5098.jpg` — 文章 a2805
-- `http://lifetea.org/images/5100.jpg` — 文章 a2807
-- `http://lifetea.org/images/5102.jpg` — 文章 a2807
 - `http://lifetea.org/images/5119.jpg` — 文章 a2811
 - `http://lifetea.org/images/5120.jpg` — 文章 a2811
 - `http://lifetea.org/images/5122.jpg` — 文章 a2811
@@ -398,7 +396,6 @@
 - `http://lifetea.org/images/5182.jpg` — 文章 a2827
 - `http://lifetea.org/images/5185.jpg` — 文章 a2829
 - `http://lifetea.org/images/5187.jpg` — 文章 a2830
-- `http://lifetea.org/images/5188.jpg` — 文章 a2831
 - `http://lifetea.org/images/5189.jpg` — 文章 a2832
 - `http://lifetea.org/images/519.jpg` — 文章 a1639
 - `http://lifetea.org/images/5190.jpg` — 文章 a2832

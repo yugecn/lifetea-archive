@@ -60,7 +60,7 @@ for f in sorted(glob.glob(RAW+'/feeds/*.xml')):
                  href=unq(href),body=body.get_text() if body else '',ts=ts,src=u.strip(),comments=None,_ind=False,source='wayback-feed'))
 img_have=set()
 for f in glob.glob(RAW+'/img/**/*',recursive=True):
-    if os.path.isfile(f) and not f.endswith(('.src','.fail')): img_have.add(os.path.relpath(f,RAW+'/img'))
+    if os.path.isfile(f) and not f.endswith(('.src','.fail','.fail2','.nf')): img_have.add(os.path.relpath(f,RAW+'/img'))
 missing_img={}
 used_img=set()
 def fix_img(m_src,pid):

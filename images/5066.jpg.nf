@@ -1,1 +1,0 @@
-[["20230914105836", "http://www.lifetea.org/images/5066.jpg"], ["20230914105836", "http://www.lifetea.org/images/5066.jpg"]]
