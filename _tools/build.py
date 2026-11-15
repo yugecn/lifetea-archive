@@ -75,10 +75,30 @@ def fix_img(m_src,pid):
     missing_img.setdefault(s,set()).add(pid)
     return s
 def esc(s): return s.replace('\\','\\\\').replace('"','\\"')
+
+import html as _html
+_MOJ=re.compile(r'[\u0080-\u00ff\u0152\u0153\u0160\u0161\u0178\u017d\u017e\u0192\u02c6\u02dc\u2013\u2014\u2018-\u201e\u2020-\u2022\u2026\u2030\u2039\u203a\u20ac\u2122]{2,}')
+def _enc(ch):
+    try: return ch.encode('cp1252')
+    except UnicodeEncodeError:
+        if ord(ch)<256: return bytes([ord(ch)])
+        raise
+def _unmoj(m):
+    s=m.group(0)
+    try: u=b''.join(_enc(c) for c in s).decode('utf-8')
+    except Exception: return s
+    return u if re.search(r'[\u3000-\u9fff\uff00-\uffef]',u) else s
+def clean_text(t):
+    t=re.sub(r'(?m)^[\ue5e5]+','',t)          # GBK 0xA3A0 indent read as private-use char
+    t=t.replace('\ue5e5','\u3000')
+    t=_MOJ.sub(_unmoj,t)                       # UTF-8 bytes shown as cp1252
+    t=re.sub(r'&#(\d+);',lambda m:_html.unescape(m.group(0)),t)
+    return t
 out=ROOT+'/posts'
 if os.path.exists(out): shutil.rmtree(out)
 index=[]
 for pid,p in sorted(posts.items()):
+    p['title']=clean_text(p['title'])
     body=re.sub(r'(<img[^>]*?\bsrc=")([^"]+)(")',lambda m:m.group(1)+fix_img(m.group(2),pid)+m.group(3),p['body'])
     body=re.sub(r"(<img[^>]*?\bsrc=')([^']+)(')",lambda m:m.group(1)+fix_img(m.group(2),pid)+m.group(3),body)
     mdb=md(body,heading_style='ATX').strip()
@@ -99,6 +119,7 @@ for pid,p in sorted(posts.items()):
             a=c['author'] if not c['url'] else '[%s](%s)'%(c['author'],c['url'])
             txt+='**%s** · %s\n\n%s\n\n'%(a,c['date'],md(c['html']).strip())
     os.makedirs(out+'/'+y,exist_ok=True)
+    txt=clean_text(txt)
     open(out+'/'+y+'/'+fn,'w').write(txt)
     index.append(dict(id=pid,title=p['title'],date=p['date'],year=y,category=p['category'],path='posts/%s/%s'%(y,fn),source=p['source'],ncom=len(p['comments'] or [])))
 json.dump(dict(index=index,missing_img={k:sorted(v) for k,v in missing_img.items()},used_img=sorted(used_img),img_have=len(img_have)),open(ROOT+'/_build.json','w'),ensure_ascii=False,indent=0)
