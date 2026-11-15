@@ -25,3 +25,24 @@ Common Crawl post pass (2026-11-13):
 
 Image retry pass (2026-11-13): after fetch2.done, run `cd _raw && IV=7 python3 retry_fail.py` (background). It retries every img/*.fail with other Wayback capture dates (both hosts); writes .fail2 when nothing works; done marker _raw/retry_fail.done. Then sync/push.
 Album: full paged CDX of photo.lifetea.org in _raw/album/full_*.txt (cdx_all.py); older cdx_www_photo.txt/cdx_imagestation.txt were truncated at 1000/2000 rows.
+
+Missing-posts pass (2026-11-15):
+- Finding: the original Textpattern site kept running until ~2019 (spam only from ~2021). Common Crawl 2016-2019 copies
+  (_raw/cc_late/, see its README.md; fetch.py + extract.py, data.commoncrawl.org byte ranges, no Wayback) recovered 41 missing
+  posts with comments, plus 5 posts after the 2012-02 archive index (a2937-a2941, 2013-08 … 2016-11) found in the 2017
+  /archive/ page. build.py reads cc_late/*.html as source "commoncrawl"; parse.py also reads the zh-cn date format ("3月 05, 2011");
+  build.py takes the id from the capture URL when a single-post page has a relative title link (a2927).
+- Not posts: ?p=548 / ?p=573 are WordPress-era ids (redirect to the home page). The 13 plan ids 626-652, 1042, 2023, 2062,
+  2160, 2835 only have /archive/<id> captures, which render the Pigeonhole list, not the post (none are in the blog's own archive
+  index; likely hidden/draft). 1802 has one 2007 /article/1802/ capture without an entry (fetch_posts.py retries it).
+- Checked, nothing new: all _raw/pages/*.html hold a real entry (only o16 = /archive/ list); tecinese.com in CC 2008-2012 is a
+  mirror of lifetea.org (tec/); archive.today = captcha; web search for titles found no reposts.
+- Still missing after this pass: 61 ids (47 listed in the archive index with no copy anywhere on disk + the 14 /archive/-only ids). MISSING.md lists them.
+- Wayback follow-up for them: _raw/fetch_posts.py (header explains the stages). Only when nothing else uses Wayback:
+    cd /workspace/work/lifetea/_raw && IV=8 nohup setsid python3 fetch_posts.py > fetch_posts.out 2>&1 < /dev/null &
+  It exits at once if retry_fail.py or fetch2.py is running, stops itself after MAXREQ=120 requests or TMAX=1080 s (rerun to continue;
+  resumable), log _raw/fetch_posts.log, done marker _raw/fetch_posts.done. Stages: (1) Wayback CDX of lifetea.org/www /article/ +
+  ?id= captures 2013-2020 and tecinese.com HTML <=2007 -> fp_cdx/; (2) missing ids -> pages/<id>.html (+.fp tried list), merged by
+  build.py like fetch2 pages; (3) 23 RSS/Atom captures -> feeds/ (build.py reads them as source "wayback-feed", lowest priority; feed parser untested until feeds exist);
+  (4) old tecinese.com pages -> tecinese_pages/, title matches of missing posts in fp_match.json (manual follow-up).
+  Afterwards: bash _tools/sync.sh (takes ~3-4 min: run it in the background), then push.

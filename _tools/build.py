@@ -6,9 +6,14 @@ ROOT='/workspace/work/lifetea'; RAW=ROOT+'/_raw'
 posts={}
 def score(p):
     # individual page > listing copy; then more comments; then Wayback over CC on ties; then newer capture
-    return (1 if p['_ind'] else 0, len(p['comments'] or []), 1 if p['source']=='wayback' else 0, p['ts'])
+    # feed items (source wayback-feed) rank below any page copy: they may be excerpts
+    return (1 if p['_ind'] else 0, len(p['comments'] or []), 0 if p['source']=='wayback-feed' else 1, 1 if p['source']=='wayback' else 0, p['ts'])
 def add(p):
-    if p['id'] is None: return
+    if p['id'] is None:
+        # single-post page whose title link is relative (e.g. a2927 "@美国"): take the id from the capture URL
+        m=re.search(r'/article/(\d+)',p.get('src',''))
+        if p.get('_ind') and m: p['id']=int(m.group(1)); p['href']=unq(p['src'].replace(':80/','/',1))
+        else: return
     if p['id'] not in posts or score(p)>score(posts[p['id']]): posts[p['id']]=p
 files=sorted(glob.glob(RAW+'/pages/*.html'))
 for f in files:
@@ -19,9 +24,10 @@ for f in files:
         if not isind: p['comments']=None
         p.setdefault('comments',None); p['source']='wayback'
         add(p)
-# Common Crawl copies (2008-2014 captures), see _raw/cc_pages/README.md
+# Common Crawl copies: 2008-2014 captures (_raw/cc_pages/README.md) and 2015-2019 captures of the still-running
+# original site (_raw/cc_late/README.md); both are source "commoncrawl" with crawl id + capture in front matter
 import warnings; warnings.filterwarnings('ignore')
-for f in sorted(glob.glob(RAW+'/cc_pages/*.html')):
+for f in sorted(glob.glob(RAW+'/cc_pages/*.html'))+sorted(glob.glob(RAW+'/cc_late/*.html')):
     if not os.path.exists(f+'.src'): continue
     ts,u,crawl=open(f+'.src').read().split()
     try: r=parse(f)
@@ -31,6 +37,27 @@ for f in sorted(glob.glob(RAW+'/cc_pages/*.html')):
         if not p['_ind']: p['comments']=None
         p.setdefault('comments',None); p['source']='commoncrawl'; p['crawl']=crawl; p['src']=u
         add(p)
+# RSS/Atom feed captures fetched by _raw/fetch_posts.py (stage 3): last resort for posts no page copy has
+from bs4 import BeautifulSoup
+import datetime,email.utils
+for f in sorted(glob.glob(RAW+'/feeds/*.xml')):
+    if not os.path.exists(f+'.src'): continue
+    ts,u=open(f+'.src').read().split(' ',1)
+    s=BeautifulSoup(open(f,'rb').read(),'xml')
+    for it in s.find_all(['item','entry']):
+        ln=it.find('link'); href=(ln.get('href') or ln.get_text()) if ln else ''
+        m=re.search(r'/article/(\d+)',href)
+        if not m: continue
+        body=it.find('content') or it.find('encoded') or it.find('description') or it.find('summary')
+        d=''
+        pd=it.find('pubDate') or it.find('published') or it.find('updated')
+        if pd:
+            t=pd.get_text(strip=True)
+            try: d=email.utils.parsedate_to_datetime(t).date().isoformat()
+            except Exception: d=t[:10] if re.match(r'\d{4}-\d\d-\d\d',t) else ''
+        cat=it.find('category'); cat=(cat.get('term') or cat.get_text(strip=True)) if cat else ''
+        add(dict(id=int(m.group(1)),title=it.find('title').get_text(strip=True) if it.find('title') else '',date=d,category=cat,
+                 href=unq(href),body=body.get_text() if body else '',ts=ts,src=u.strip(),comments=None,_ind=False,source='wayback-feed'))
 img_have=set()
 for f in glob.glob(RAW+'/img/**/*',recursive=True):
     if os.path.isfile(f) and not f.endswith(('.src','.fail')): img_have.add(os.path.relpath(f,RAW+'/img'))
@@ -58,7 +85,9 @@ for pid,p in sorted(posts.items()):
     mdb=re.sub(r'\n{3,}','\n\n',mdb)
     y=p['date'][:4] if p['date'] else 'undated'
     fn='%s-a%d.md'%(p['date'] or 'undated',pid)
-    if p['source']=='wayback':
+    if p['source'] in ('wayback','wayback-feed'):
+        srcl='source: '+p['source']+'\nwayback_url: "https://web.archive.org/web/%s/%s"\n'%(p['ts'],p['src'])
+    elif False:
         srcl='source: wayback\nwayback_url: "https://web.archive.org/web/%s/%s"\n'%(p['ts'],p['src'])
     else:
         srcl='source: commoncrawl\ncrawl: %s\ncapture: "%s %s"\n'%(p['crawl'],p['ts'],esc(p['src']))

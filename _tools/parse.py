@@ -19,7 +19,9 @@ def parse(path):
         m=re.search(r'/article/(\d+)',href) or re.search(r'/archive/(\d+)',href)
         tm=e.select_one('.entrytime'); ds=tm.get_text(strip=True).lstrip('@ ').strip() if tm else ''
         try: d=datetime.datetime.strptime(ds,'%b %d, %Y').date().isoformat()
-        except Exception: d=''
+        except Exception:
+            m2=re.match(r'(\d{1,2})月\s*(\d{1,2}),\s*(\d{4})',ds)   # zh-cn locale of the 2017-2019 site: "3月 05, 2011"
+            d='%s-%02d-%02d'%(m2.group(3),int(m2.group(1)),int(m2.group(2))) if m2 else ''
         body=e.select_one('.entrybody')
         cat=''
         ca=e.select_one('.entrymeta a')

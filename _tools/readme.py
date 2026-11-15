@@ -5,8 +5,9 @@ idx=b['index']
 plan=json.load(open(RAW+'/plan.json'))
 all_ids=sorted(int(k) for k in plan['ids'])
 got={p['id'] for p in idx}
-fails=sorted(int(os.path.basename(f)[:-10]) for f in glob.glob(RAW+'/pages/[0-9]*.html.fail'))
-pending=[i for i in all_ids if i not in got and i not in fails]
+fails=sorted(i for i in (int(os.path.basename(f)[:-10]) for f in glob.glob(RAW+'/pages/[0-9]*.html.fail')) if i not in got)
+NOTPOST={548,573}  # WordPress-era ?p= ids (pre-Textpattern), not posts
+pending=[i for i in all_ids if i not in got and i not in fails and i not in NOTPOST]
 imgs_cdx=[l for l in open(RAW+'/main.txt') if len(l.split())>2 and l.split()[2].startswith('image') and l.split()[0]<'20140101']
 img_fail=glob.glob(RAW+'/img/**/*.fail',recursive=True)
 by=collections.defaultdict(list)
@@ -19,7 +20,7 @@ for d in ('posts','images'):
         for f in fs: size+=os.path.getsize(os.path.join(r,f))
 L=[]
 L.append('# Chinese Tea · lifetea.org 存档\n')
-L.append('christina@Nanjing 的博客 **lifetea.org**（“Chinese Tea”，Textpattern 系统）的私人抢救存档。域名过期后被他人用于垃圾页面，本存档从 Internet Archive Wayback Machine 和 Common Crawl（2008–2014 年的抓取）中恢复域名过期前属于原博客的内容，2016 年以后的垃圾页面已全部排除。每篇文章的 front matter 用 `source` 注明来源（`wayback` 或 `commoncrawl` + `crawl` 抓取批次）。\n')
+L.append('christina@Nanjing 的博客 **lifetea.org**（“Chinese Tea”，Textpattern 系统）的私人抢救存档。域名过期后被他人用于垃圾页面，本存档从 Internet Archive Wayback Machine 和 Common Crawl（2008–2019 年的抓取；原博客一直在线到约 2019 年）中恢复属于原博客的内容，之后的垃圾页面已全部排除。每篇文章的 front matter 用 `source` 注明来源（`wayback` 或 `commoncrawl` + `crawl` 抓取批次）。\n')
 L.append('## 统计\n')
 L.append('| 项目 | 数量 |\n|---|---|')
 L.append('| 已恢复文章 | %d |'%len(idx))
@@ -48,6 +49,12 @@ M=['# 缺失清单\n']
 M.append('## 抓取失败的文章 ID（Wayback 有记录但取不到正文）\n')
 M.append(', '.join(map(str,fails)) or '无')
 if pending: M.append('\n## 尚未抓取的文章 ID（抓取仍在进行）\n\n'+', '.join(map(str,pending)))
+if AI:
+    nowhere=sorted(int(k) for k in AI if int(k) not in got and int(k) not in plan['ids'] and str(k) not in plan['ids'])
+    nowhere=[i for i in nowhere if str(i) not in plan['ids']]
+    if nowhere:
+        M.append('\n## 归档页列出、但没有任何存档副本的文章（%d 篇）\n'%len(nowhere))
+        for i in nowhere: M.append('- a%d %s（%s）'%(i,AI[str(i)]['title'],AI[str(i)]['month']))
 M.append('\n## 文章中引用但未能取得的图片\n')
 for k,v in sorted(b['missing_img'].items()): M.append('- `%s` — 文章 %s'%(k,', '.join('a%d'%i for i in v)))
 open(ROOT+'/MISSING.md','w').write('\n'.join(M)+'\n')
