@@ -15,14 +15,15 @@ def folder(rel):
     d,y=first[rel]
     return y+'/'+d[5:7] if cnt[y]>900 and re.match(r'\d{4}-\d\d',d) else y
 moved=0
+todo=[]
 for dp,dn,fn in os.walk('images'):
     parts=dp.split('/')
-    if len(parts)>1 and (parts[1]=='album' or re.fullmatch(r'\d{4}|misc',parts[1]) and False): continue
-    for n in fn:
-        p=os.path.join(dp,n); rel=os.path.relpath(p,'images')
-        if rel.startswith('album/'): continue
-        t=os.path.join('images',folder(rel),rel); os.makedirs(os.path.dirname(t),exist_ok=True)
-        shutil.move(p,t); moved+=1
+    if len(parts)>1 and parts[1]=='album': continue
+    for n in fn: todo.append(os.path.join(dp,n))
+for p in todo:
+    rel=os.path.relpath(p,'images')
+    t=os.path.join('images',folder(rel),rel); os.makedirs(os.path.dirname(t),exist_ok=True)
+    shutil.move(p,t); moved+=1
 for dp,dn,fn in os.walk('images',topdown=False):
     if dp!='images' and not os.listdir(dp): os.rmdir(dp)
 def rw(m):
