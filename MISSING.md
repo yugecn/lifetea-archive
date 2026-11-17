@@ -570,7 +570,6 @@
 - `http://lifetea.org/images/5513.jpg.pagespeed.ce.uda_L6Ppuw.jpg` — 文章 a2919
 - `http://lifetea.org/images/5521.jpg.pagespeed.ce.q50Tubd4st.jpg` — 文章 a2922
 - `http://lifetea.org/images/5522.jpg.pagespeed.ce.fIuRZu13Ls.jpg` — 文章 a2923
-- `http://lifetea.org/images/5538.jpg` — 文章 a2930
 - `http://lifetea.org/images/614.jpg` — 文章 a1670
 - `http://lifetea.org/images/657.jpg` — 文章 a1692
 - `http://lifetea.org/images/658.jpg` — 文章 a1692
