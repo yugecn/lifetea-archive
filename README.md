@@ -23,7 +23,8 @@ christina@Nanjing 的博客 **lifetea.org**（“Chinese Tea”，Textpattern �
 - `posts/YYYY/YYYY-MM-DD-a<文章ID>.md`：每篇文章一份 Markdown，带 front matter（标题、日期、分类、原始链接、来源：Wayback 链接或 Common Crawl 抓取批次），正文后附评论（只从列表页取得的文章标为 "not captured"）。
 - `images/`：原博客 `/images/` 下的图片原文件。文章里的图片已改为相对路径；未能恢复的图片保留指向 Wayback 的链接。
 - `MISSING.md`：缺失的文章与图片清单。
-- `index.html`：可直接在浏览器打开的简单目录页。
+- 网站：https://yugecn.github.io/lifetea-archive/ ，用原站最后一版主题（2011–2013，`themes/ctea-lifetea-2011`）渲染的静态博客。`index.html` 与 `page/` 为首页分页，`p/<文章ID>.html` 为文章页（含评论），`archive/` 为按年/月归档，`category/` 为分类页，`assets/` 为主题资源；由 `_tools/site.py` 生成，`_tools/linkcheck.py` 检查站内链接。
+- `toc.html`：简单目录页（直接链接 Markdown 原文）。
 
 ## 文章索引
 
